@@ -181,3 +181,9 @@ ls 명령어의 결과물을 출력한다
 README.md
 test.sh
 ```
+
+---
+
+**reference**
+
+[티스토리](https://rhrhth23.tistory.com/33)
