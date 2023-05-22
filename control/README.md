@@ -215,6 +215,46 @@ done
 
 
 
+## while
+
+내가 아는 그 `while`문이다. 주어진 조건이 참 / 거짓일때까지 명령을 반복해서 수행한다.
+기본 사용법을 알아보자
+```bash
+while condition
+do 
+	statement 1
+    statement 2
+    .
+    .
+    .
+    statement n
+done
+```
+
+`while`문은 condition 조건이 필요하다.
+해당 조건이 거짓일때까지 `do`와 `done`사이의 명령이 반복되어 수행되며, done 바로 이전 명령이 마지막 명령이 된다. 어떤 명령도 수행되지 않은 경우에는 종료값이 0이 된다.
+
+간단한 예시 코드를 작성해보자
+
+```bash
+#! /bin/zsh
+
+A=1
+
+while [ $A -lt 5 ]
+do
+        echo "A = $A"
+        A=`expr $A + 1`
+done
+```
+변수 A가 5보다 작다면 A를 출력하고 1씩 더하는 반복문이다.
+> 여기서 사용된 `expr` 는 정수를 계산하기 위해 사용되는 명령어이다.
+유의할 점은 계산식 작성시, 기호와 정수사이에는 공백이 무조건 존재해야 한다.
+```bash
+expr 4 % 3
+> 1
+```
+
 ---
 **reference**
 
